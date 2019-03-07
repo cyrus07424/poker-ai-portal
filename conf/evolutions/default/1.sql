@@ -3,7 +3,7 @@
 
 # --- !Ups
 
-create table user_table (
+create table client_user (
   id                            bigint not null,
   email                         varchar(255) not null,
   password                      varchar(255) not null,
@@ -17,15 +17,15 @@ create table user_table (
   create_date                   timestamptz not null,
   update_date                   timestamptz not null,
   version                       bigint not null,
-  constraint ck_user_table_client_user_status check ( client_user_status in ('leaved','temporary','verified')),
-  constraint uq_user_table_email unique (email),
-  constraint pk_user_table primary key (id)
+  constraint ck_client_user_client_user_status check ( client_user_status in ('leaved','temporary','verified')),
+  constraint uq_client_user_email unique (email),
+  constraint pk_client_user primary key (id)
 );
-create sequence user_table_seq;
+create sequence client_user_seq;
 
 
 # --- !Downs
 
-drop table if exists user_table cascade;
-drop sequence if exists user_table_seq;
+drop table if exists client_user cascade;
+drop sequence if exists client_user_seq;
 

@@ -9,7 +9,6 @@ import play.data.validation.ValidationError;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +17,6 @@ import java.util.List;
  *
  * @author cyrus
  */
-@Table(name = "user_table")
 @Entity
 public class ClientUser extends AbstractModel {
 
