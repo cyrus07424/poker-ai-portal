@@ -30,7 +30,6 @@ libraryDependencies ++= Seq(
   "org.webjars" %% "webjars-play" % "2.6.3",
   "org.webjars" % "font-awesome" % "5.6.1",
   "org.webjars.bower" % "github-com-raryosu-Rin" % "v3.3.7-2",
-  "com.heroku.agent" % "heroku-javaagent" % "2.0",
 )
 
 // Testing libraries for dealing with CompletionStage...
@@ -49,10 +48,3 @@ TwirlKeys.templateImports ++= Seq(
   "constants._",
   "utils._"
 )
-
-// Heroku settings
-herokuAppName in Compile := "poker-ai-portal"
-herokuProcessTypes in Compile := Map(
-  "web" -> "target/universal/stage/bin/poker-ai-portal -Dconfig.resource=${CONFIGURATION_FILE} -Dhttp.port=${PORT} -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap"
-)
-herokuJdkVersion in Compile := "1.8"

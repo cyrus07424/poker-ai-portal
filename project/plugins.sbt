@@ -1,7 +1,7 @@
 resolvers += "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 
 // The Play plugin
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.19")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.21")
 
 // Play enhancer - this automatically generates getters/setters for public fields
 // and rewrites accessors of these fields to use the getters/setters. Remove this
@@ -17,7 +17,3 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.1.2")
 
 // digest
 addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.4")
-
-// heroku
-// https://github.com/heroku/sbt-heroku
-addSbtPlugin("com.heroku" % "sbt-heroku" % "2.1.2")
