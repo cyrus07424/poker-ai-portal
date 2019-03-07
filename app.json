@@ -1,0 +1,32 @@
+{
+  "addons": [
+    "papertrail",
+    "heroku-postgresql",
+    "sendgrid"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/scala"
+    }
+  ],
+  "env": {
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "PLAY_HTTP_SECRET_KEY": {
+      "generator": "secret"
+    },
+    "SENDGRID_PASSWORD": {
+      "required": true
+    },
+    "SENDGRID_USERNAME": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "poker-ai-portal",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
