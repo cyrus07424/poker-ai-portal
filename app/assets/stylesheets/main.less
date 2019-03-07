@@ -1,0 +1,57 @@
+/* variables */
+@header-color: rgba(34,34,34,.8);
+@header-height: 81px;
+@footer-height: 63px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* body */
+body {
+    /* for fixed navbar */
+    padding-top: @header-height;
+
+    /* for footer */
+    padding-bottom: @footer-height;
+}
+
+/* main content */
+.main-content {
+    padding-bottom: 15px;
+}
+
+/* footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    > .container {
+        width: 100%;
+        height: inherit;
+        background-color: @header-color;
+    }
+    .footer-row {
+        padding-top: 5px;
+        text-align: center;
+        color: #fff;
+        select {
+            color: #000;
+        }
+        &:last-child {
+            padding-bottom: 5px;
+        }
+    }
+    a {
+        color: #fff;
+    }
+}
+
+.text-header-color {
+    color: @header-color;
+}
+
+.panel-heading a {
+    color: #fff;
+}

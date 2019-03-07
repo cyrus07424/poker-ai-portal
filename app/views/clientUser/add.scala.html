@@ -1,0 +1,28 @@
+@(inputForm: Form[_])
+
+@implicitField = @{FieldConstructor(MainFieldConstructor.f)}
+
+@main("クライアントユーザー仮登録") {
+    @snippets.globalErrorAll(inputForm)
+
+    @snippets.p{
+        @snippets.a(routes.CommonController.termsOfUse()){利用規約}
+        に同意し、下記の情報を入力してください。
+    }
+
+    @form(routes.ClientUserController.create()){
+        @checkbox(
+            inputForm("agree"),
+            '_labelText -> "利用規約に同意",
+            '_checkbox -> "true",
+            '_required -> "true"
+        )
+        @inputText(
+            inputForm("email"),
+            '_labelText -> "メールアドレス",
+            '_required -> "true",
+            'class -> "form-control"
+        )
+        @snippets.submitBtnBlockPrimary{送信}
+    }
+}

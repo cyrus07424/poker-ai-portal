@@ -1,0 +1,27 @@
+# --- Errors
+error.invalid=値が不正です
+error.invalid.java.util.Date=日付の値が不正です
+error.required=入力してください
+error.min={0}以上の値を入力してください
+error.max={0}以下の値を入力してください
+error.minLength={0}文字以上入力してください
+error.maxLength={0}文字以内で入力してください
+error.email=メールアドレスの形式が不正です
+error.pattern={0}のパターンを満たす形式で入力してください
+
+# --- Application Messages
+info.createSuccess=作成しました
+info.updateSuccess=更新しました
+info.deleteSuccess=削除しました
+error.default=エラーが発生しました
+error.processFailed=処理が完了できませんでした
+error.agreeNotChecked=利用規約の同意にチェックをしてください
+error.duplicateEmail=ご入力いただいたメールアドレスは既に使用されています
+error.invalidUrl=不正なURLです
+
+# --- Email
+mail.temporaryRegistered.title=仮登録のお知らせ
+mail.temporaryRegistered.body=仮登録が完了しました。\nパスワード : {0}\nAPIキー : {1}\nメールアドレス確認用URL : {2}
+
+# --- Views
+views.label.clientUserAdd=ユーザー登録

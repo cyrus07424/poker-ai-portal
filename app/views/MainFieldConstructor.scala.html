@@ -1,0 +1,45 @@
+@(elements: views.html.helper.FieldElements)
+
+@requiredBlock = {
+    <span class="label label-danger">必須</span>
+}
+
+<div class="form-group has-feedback @if(elements.hasErrors) {has-error}">
+    @if(Boolean.parseBoolean(String.valueOf(elements.args.get('_checkbox).getOrElse("false")))){
+        <div class="checkbox">
+            <label>
+                @elements.input
+                @elements.args.get('_labelText).getOrElse(elements.label)&nbsp;
+                @if(Boolean.parseBoolean(String.valueOf(elements.args.get('_required).getOrElse("false")))){
+                    @requiredBlock
+                }
+            </label>
+        </div>
+    }else{
+        @if(elements.args.get('_labelDisplay).getOrElse("block") != "none") {
+            <label for="@elements.id">
+                @elements.args.get('_labelText).getOrElse(elements.label)&nbsp;
+                @if(Boolean.parseBoolean(String.valueOf(elements.args.get('_required).getOrElse("false")))){
+                    @requiredBlock
+                }
+            </label>
+        }
+        @if(elements.args.get('_inputGroupAddon) != None){
+            <div class="input-group">
+                <span class="input-group-addon">@Html(String.valueOf(elements.args.get('_inputGroupAddon).get))</span>
+                @elements.input
+            </div>
+        }else{
+            @elements.input
+        }
+        @if(elements.hasErrors) {
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            @for(error <- elements.errors){
+                <span class="help-block">@error</span>
+            }
+        }
+        @if(elements.args.get('_helpBlock) != None){
+            <span class="help-block help-block-default">@Html(String.valueOf(elements.args.get('_helpBlock).get))</span>
+        }
+    }
+</div>

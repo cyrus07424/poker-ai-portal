@@ -1,0 +1,4 @@
+@(href: Any, args: (Symbol,Any)*)(content: Html)
+<a href="@href" @toHtmlArgs(args.filter(arg => !arg._1.name.startsWith("_")).toMap)>
+    @content
+</a>

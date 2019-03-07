@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                                 controllers.Assets.versioned(path="/public", file: Asset)
+
+# Common
+GET     /                                             controllers.CommonController.index()
+GET     /termsOfUse                                   controllers.CommonController.termsOfUse()
+GET     /privacyPolicy                                controllers.CommonController.privacyPolicy()
+
+# ClientUser
+GET     /clientUser/add                               controllers.ClientUserController.add()
+POST    /clientUser/create                            controllers.ClientUserController.create()
+GET     /clientUser/verifyRegister                    controllers.ClientUserController.verifyRegister(uuid: String)

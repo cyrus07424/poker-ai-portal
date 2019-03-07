@@ -1,0 +1,7 @@
+@if(!flash.isEmpty()){
+    @for(line <- flash){
+        <div class="alert @if(line._1==constants.FlashKeys.ERROR){alert-danger}else{alert-info}">
+            @Messages(line._2)
+        </div>
+    }
+}

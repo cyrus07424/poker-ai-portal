@@ -1,0 +1,8 @@
+@(inputForm: Form[_])
+@if(inputForm.hasGlobalErrors()) {
+    <div class="alert alert-danger">
+        @for(error <- inputForm.globalErrors()){
+            @Html(Messages(error.message, error.arguments))<br>
+        }
+    </div>
+}

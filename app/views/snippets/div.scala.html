@@ -1,0 +1,4 @@
+@(args: (Symbol,Any)*)(content: Html)
+<div @toHtmlArgs(args.filter(arg => !arg._1.name.startsWith("_")).toMap)>
+    @content
+</div>
