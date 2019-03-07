@@ -28,8 +28,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.play" %% "play-mailer-guice" % "6.0.1",
   "org.mindrot" % "jbcrypt" % "0.4",
   "org.webjars" %% "webjars-play" % "2.6.3",
-  "org.webjars" % "font-awesome" % "5.6.1",
+  "org.webjars" % "jquery" % "3.3.1-2",
   "org.webjars.bower" % "github-com-raryosu-Rin" % "v3.3.7-2",
+  "org.webjars" % "font-awesome" % "5.6.1",
 )
 
 // Testing libraries for dealing with CompletionStage...

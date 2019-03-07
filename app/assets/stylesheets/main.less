@@ -1,7 +1,6 @@
 /* variables */
 @header-color: rgba(34,34,34,.8);
-@header-height: 81px;
-@footer-height: 63px;
+@header-height: 80px;
 
 html {
     position: relative;
@@ -12,9 +11,6 @@ html {
 body {
     /* for fixed navbar */
     padding-top: @header-height;
-
-    /* for footer */
-    padding-bottom: @footer-height;
 }
 
 /* main content */
@@ -27,23 +23,15 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 30px;
     > .container {
         width: 100%;
         height: inherit;
-        background-color: @header-color;
+        background-color: #000;
     }
-    .footer-row {
+    .row {
         padding-top: 5px;
         text-align: center;
-        color: #fff;
-        select {
-            color: #000;
-        }
-        &:last-child {
-            padding-bottom: 5px;
-        }
-    }
-    a {
         color: #fff;
     }
 }
