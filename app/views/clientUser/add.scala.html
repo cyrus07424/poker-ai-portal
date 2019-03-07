@@ -10,7 +10,7 @@
         に同意し、下記の情報を入力してください。
     }
 
-    @form(routes.ClientUserController.create()){
+    @form(CSRF(routes.ClientUserController.create())){
         @checkbox(
             inputForm("agree"),
             '_labelText -> "利用規約に同意",
